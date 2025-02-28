@@ -1,10 +1,8 @@
 /*
- * File:   newmain.c
- * Author: DELL
- *
- * Created on 24 February, 2025, 6:01 PM
- */
-#define _XTAL_FREQ 1000000
+  LED BLINKING PROJECT USING PIC16F1509 MICROCONTROLLER
+*/
+
+#define _XTAL_FREQ 1000000      // This is setting the FRQ to 1MHz
 // CONFIG1
 #pragma config FOSC = INTOSC    // Oscillator Selection Bits (INTOSC oscillator: I/O function on CLKIN pin)
 #pragma config WDTE = OFF       // Watchdog Timer Enable (WDT disabled)
@@ -36,10 +34,6 @@ void main(void) {
     ANSELA = 0x00;
     ANSELA = 0x00;
     
-   /* LATCbits.LATC0 = 1;
-    LATCbits.LATC1 = 1;
-    LATCbits.LATC2 = 1;
-    */
     while(1){
         LATCbits.LATC0 = 1;
     LATCbits.LATC1 = 0;
@@ -47,7 +41,7 @@ void main(void) {
     LATCbits.LATC3 = 0;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 0;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
             
      LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 1;
@@ -55,7 +49,7 @@ void main(void) {
     LATCbits.LATC3 = 0;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 0;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
             
     LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 0;
@@ -63,7 +57,7 @@ void main(void) {
     LATCbits.LATC3 = 0;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 0;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
         
     LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 0;
@@ -71,7 +65,7 @@ void main(void) {
     LATCbits.LATC3 = 1;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 0;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
     
     LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 0;
@@ -79,7 +73,7 @@ void main(void) {
     LATCbits.LATC3 = 0;
     LATCbits.LATC4 = 1;
     LATCbits.LATC5 = 0;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
     
     LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 0;
@@ -87,7 +81,7 @@ void main(void) {
     LATCbits.LATC3 = 0;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 1;
-    __delay_ms(500);  // request a delay in milliseconds
+    __delay_ms(500);  // request a delay in milliseconds (Inbuilt delay Function)
     }
     return;
 }
